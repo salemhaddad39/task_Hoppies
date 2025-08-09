@@ -39,14 +39,14 @@ class SummaryPage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             
-            // التحقق من وجود هوايات
+          
             if (Hobbies.isEmpty)
               Text(
                 "No hobbies added",
                 style: TextStyle(color: Colors.grey),
               )
             else
-              // عرض قائمة الهوايات
+            
               Column(
                 children: Hobbies.map((hobby) {
                   return Padding(

@@ -13,13 +13,13 @@ class _ProfilePageState extends State<ProfilePage> {
   TextEditingController userCityController = TextEditingController();
   TextEditingController userAgeController = TextEditingController();
   
-  // قائمة الهوايات المضافة
+
   List<String> hobbiesList = [];
   
-  // قيمة الدروب داون المختارة
+ 
   String? selectedHobby;
   
-  // قائمة الهوايات المتاحة للاختيار
+  
   final List<String> availableHobbies = [
     'Reading',
     'Swimming', 
@@ -33,18 +33,15 @@ class _ProfilePageState extends State<ProfilePage> {
     'Traveling'
   ];
   
-  // دالة إضافة الهواية للقائمة
   void addHobby() {
     if (selectedHobby != null && !hobbiesList.contains(selectedHobby!)) {
       setState(() {
         hobbiesList.add(selectedHobby!);
       });
-      // إعادة تعيين الاختيار
       selectedHobby = null;
     }
   }
   
-  // دالة حذف الهواية من القائمة
   void removeHobby(String hobby) {
     setState(() {
       hobbiesList.remove(hobby);
@@ -74,7 +71,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               SizedBox(height: 20),
               
-              // الدروب داون لاختيار الهواية
+          
               DropdownButton<String>(
                 hint: Text("Select a hobby"),
                 value: selectedHobby,
@@ -93,14 +90,13 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               SizedBox(height: 10),
               
-              // زر إضافة الهواية
               ElevatedButton(
                 onPressed: addHobby,
                 child: Text("Add Hobbies"),
               ),
               SizedBox(height: 20),
               
-              // عرض الهوايات المضافة
+            
               if (hobbiesList.isNotEmpty)
                 Container(
                   height: 100,
@@ -147,7 +143,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Name: userName,
                         City: userCity,
                         Age: userAge,
-                        Hobbies: hobbiesList, // تمرير قائمة الهوايات
+                        Hobbies: hobbiesList, 
                       ),
                     ),
                   );
