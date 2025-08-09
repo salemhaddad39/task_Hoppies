@@ -29,7 +29,7 @@ class SummaryPage extends StatelessWidget {
             Text("Age: $Age"),
             SizedBox(height: 20),
             
-            // عرض الهوايات
+      
             Text(
               "Hobbies:",
               style: TextStyle(
